@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid Example</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .header {
+            width: 99vw;
+            border: 2px solid rgb(98, 95, 95);
+            margin: 0.5rem;
+            padding: 0.5rem;
+            background-color: #343a40;
+            color: #ffffff;
+            min-height: 3.5rem;
+            border-radius: 0.9rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .items {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            gap: 2rem;
+        }
+
+        .items a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        #login {
+            margin: 1rem;
+            padding: 0.3rem;
+            background-color: rgb(111, 111, 227);
+            color: rgb(12, 20, 44);
+            font-size: 1.5rem;
+            border-radius: 0.6rem;
+        }
+
+        #login:hover {
+            background-color: rgb(12, 12, 78);
+            color: aliceblue;
+        }
+
+        .images {
+            position: relative;
+           
+            display: flex;
+            gap: 5rem;
+            margin: 3rem;
+        }
+ 
+        .img1 {
+            align-items:end;
+            justify-content:space-between;
+            width: 250px;
+            height:max-content;
+            padding: 0.3rem;
+            border: 2px solid black;
+            border-radius: 12px;
+            box-shadow: 5px 7px 20px rgb(94, 3, 3),
+                        5px 7px 10px black;
+        }
+        .characters img ,li{
+            list-style-type: none;
+            margin: 1.5rem  2rem;
+        }
+        .artical {
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #000000;
+            padding: 1.5rem;
+            max-width: 70%;
+            margin: 2rem 2rem 0.3rem 1.5rem ;
+            border-radius: 10px;
+        }
+        
+        .artical li {
+            list-style-type: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pera{
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            box-shadow: inset 2px 3px 50px rgb(163, 160, 160);
+            border-radius: 8px;
+            justify-content: center;
+        }
+        .pera::first-letter {
+            font-size: 3rem; /* Make the first letter larger */
+            font-weight: bold; /* Make it bold */
+            color: rgb(0, 0, 0); /* Optional color change */
+        }      
+        
+        @media screen and (max-width: 600px) {
+            .artical {
+                font-size: 1.1rem;
+                padding: 1rem;
+            }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        footer{
+            width: 93vw;
+            border: 2px solid rgb(98, 95, 95);
+            margin: 2.5rem;
+            padding: 0.5rem;
+            background-color: #343a40;
+            color: #ffffff;
+            min-height: 3.5rem;
+            border-radius: 0.9rem;
+            display: flex;
+            justify-content:space-around;
+            font-size: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        body{
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <h1>Anime Blog WebPage</h1>
+            <ul class="items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="index1.html" id="login">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="images">
+            <ul class="artical">
+                <li><p class="pera">ommodi, dolorem dicta eius id! Incidunt quibusdam explicabo et cupiditate ea facere similique temporibus suscipit doloremque ad, saepe quam voluptatibus nulla iusto quas dolores molestiae quasi. Sunt inventore facere sequi beatae voluptatibus, commodi, doloremque necessitatibus corrupti officia voluptatum non quos natus. Ab voluptatem qui voluptas vel, nesciunt tenetur fuga voluptate esse culpa fugiat magni animi itaque molestiae, odio reiciendis hic aperiam, earum adipisci ducimus perspiciatis iusto! Molestias, excepturi hic. Nemo quod, nihil </li></p>
+                <li><p class="pera">facilis perspiciatis labore nesciunt non fuga fugiat aliquam repellendus repellat consequuntur sit. Consectetur ipsam error quibusdam quisquam doloremque commodi hic, unde minima corrupti assumenda ipsa sapiente autem magni quidem, fuga, natus dolorem eos veritatis rerum nulla dolore illo similique quis ut? Error cum nisi modi rerum. Non, culpa? Error aspernatur voluptates eaque ipsum ea totam! Rerum, unde vitae, magni incidunt sapiente impedit repellat distinctio veniam ipsam deleniti molestiae laudantium facilis o</li></p>
+                <li><p class="pera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vero atque ad? Ullam deserunt pariatur porro adipisci iure reprehenderit nisi?tempora deserunt ipsum eius eligendi molestias corporis quo obcaecati eaque aspernatur eveniet ex, odio natus vitae recusandae cupiditate. Aut sed laboriosam esse deleniti nesciunt non architecto soluta, assumenda consectetur voluptatem aspernatur error ratione pariatur aperiam accusamus, ab exercitationem incidunt quia modi est mollitia illum cumque ad! Nulla recusandae nemo ut suscipit odit neque quam in totam assumenda debitis. Nihil, molestias sit?</li></p>
+                <li><p class="pera">, recusandae fugiat enim voluptate similique explicabo ullam harum veritatis, dolor distinctio repudiandae doloribus repellendus quia ex, iusto soluta impedit suscipit ipsa nihil. Hic in obcaecati a blanditiis non rerum ipsum ea saepe deleniti eius modi nulla quisquam voluptates sapiente error suscipit, soluta esse ab autem, at aliquam quasi doloribus aliquid? Aperiam exercitationem magnam nulla incidunt, odit pariatur ipsa adipisci, doloremque dolorum voluptate sit quaerat fuga molestias iste obcaecati quam </li></p>
+                <li><p class="pera">riam nostrum? Qui officiis recusandae sequi nobis sint tempora eligendi explicabo, quisquam, molestiae quidem, ipsam ratione ea voluptatibus necessitatibus maiores eos doloribus fugit expedita veritatis cumque quam vero. Soluta, ad exercitationem corporis quod iste amet error pariatur hic aspernatur magnam esse dolore non, velit doloremque nam quasi ea dignissimos ullam. Error expedita officiis officia cupiditate dolores dolore ipsam, fugiat, nihil, a repellendus ratione sed. Iusto obcaecati nihil itaque, ullam ex sit debitis deserunt explicabo magni voluptatum, optio  </li></p>
+            </ul>
+        <ul class="characters">
+            <li><img src="Kakashi Sharingan.jpg" alt="Kakashi" class="img1"></li>
+            <li><img src="itachi.jpg" alt="Itachi" class="img1"></li>
+            <li> <img src="japan-background-digital-art.jpg" alt="Japan Background" class="img1"></li>
+            <li><img src="front-view-ninja-wearing-equipment.jpg" alt="Ninja" class="img1"></li>
+        </ul>
+        </section>
+        <section class ="foot">
+            <footer>
+                    <p>© 2025 Chaitanya Mishra. All Rights Reserved.</p>
+                    <p>Email: mr.chetan105@gmail.com | Phone: +91-9305224208</p>
+                  
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

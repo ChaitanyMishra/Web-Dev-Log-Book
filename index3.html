@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="animeImage" src="" width="400" alt="Shounen Character">
+
+    <script>
+        fetch("https://shikimori.one/api/characters/1") // Change ID for different characters
+        .then(response => response.json())
+        .then(data => {
+            let imageUrl = "https://shikimori.one" + data.image.original; // Get HD image URL
+            document.getElementById("animeImage").src = imageUrl;
+        })
+        .catch(error => console.error("Error fetching character:", error));
+    </script>
+    
+
+</body>
+</html>
