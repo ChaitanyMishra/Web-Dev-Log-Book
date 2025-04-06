@@ -154,6 +154,66 @@ stop.addEventListener('click' , () =>{
     clearInterval(intervalId)
     intervalId = null
 })
+// ========================================================================================================
+let intervalId2;
+const startBtn = document.querySelector('#startBtn');
+const stopBtn =  document.querySelector('#stopBtn');
+function randomColorChange(){
+let colorValue = '0123456789ABCDEF';
+let colorToken ='#';
+for(let i = 0 ; i<6 ;i++){
+    colorToken += colorValue[Math.floor(Math.random()*16)]
+}
+return colorToken;
+}
+function backgroundChanger(){
+    
+    document.body.style.backgroundColor = randomColorChange();
+}
+
+const startChangingColor =  function(){
+    if(!intervalId2){
+intervalId2  =   setInterval(backgroundChanger , 400)
+    }
+
+    };
+
+const stopColor = function(){
+    clearInterval(intervalId2);
+    intervalId2 = null;
+
+}
+
+startBtn.addEventListener('click', startChangingColor);
+stopBtn.addEventListener('click' , stopColor)
+
+
+// ======================================================================================
+
+const newProject = document.querySelector('.project7');
+
+function newFun(e) {
+    newProject.innerHTML = `
+    <div>
+        <table style="margin:10rem auto; display:flex; justify-content:center; align-items:center;">
+            <tr style="border:1px solid white;">
+                <th>Key</th>
+                <th>Key Code</th>
+                <th>Code</th>
+            </tr>
+            <tr>
+                <td>${e.key}</td>
+                <td>${e.keyCode || 'N/A'}</td>
+                <td>${e.code}</td>
+            </tr>
+        </table>  
+    </div>  
+`;
+
+}
+
+// ✅ Listen for keypress event
+window.addEventListener('keydown', newFun);
 
 });
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+
+        let timeCount = performance.now()
+        for(let i = 1 ; i <= 100 ; i++){
+            let pera = document.createElement('p')
+            pera.textContent = ("This is Pera" + i);
+            document.body.appendChild(pera)
+        }
+        let t2 = performance.now()
+        console.log(t2-timeCount)
+
+setTimeout(function timeout(){
+    let a = document.createElement('p')
+    a.textContent = ('chetan')
+    a.style.color = 'green';
+    document.body.appendChild(a)
+},1000)
+
+
+
+        let t3 = performance.now();
+        let newDiv = document.createElement('div');
+        for(let i = 1; i <= 100; i++){
+            let newPera = document.createElement('p');
+            newPera.textContent = ('this is a new Pera ' + i);
+            newDiv.appendChild(newPera);
+        }
+        document.body.appendChild(newDiv)
+        let t4 = performance.now()
+        console.log(`new Pera takes time ${t4-t3}`)
+
+
+        let t5 = performance.now();
+        let freg = document.createDocumentFragment();
+        for(let i = 1 ; i <=100 ; i++){
+            let fregPera = document.createElement('p');
+            fregPera.textContent = (`Efficent code pera ${i}`)
+            freg.appendChild(fregPera);
+        }
+        document.body.appendChild(freg)
+        let t6 = performance.now()
+        console.log(t6-t5)
+    </script>
+</body>
+</html>
